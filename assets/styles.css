@@ -25,6 +25,8 @@
 .voice {
 	background-color: rgba(255, 255, 255, 0);
 	border-style: none;
+	color: whitesmoke;
+	text-align: center;
 }
 .voice:hover {
 	background-color: rgba(255, 255, 255, 0.3);
@@ -45,7 +47,6 @@
 
 .open svg {
 	margin-top: 25%;
-	margin-left: 25%;
 	height: 50%;
 }
 /*#endregion*/
