@@ -3,4 +3,9 @@
 /*#region bodystyles*/
 /*#endregion*/
 /*region footer-player*/
+.footer-player {
+  height: 70px;
+  color: white;
+  background-color: black;
+}
 /*endregion*/
