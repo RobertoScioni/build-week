@@ -14,28 +14,41 @@
 	height: 300px; /* debug value*/
 	margin: 0;
 	padding: 0;
-	background-color: grey;
+	/*background-color: grey;*/
 }
 
 .selector {
 	width: fit-content;
 	margin: auto;
 }
-/* debug classes for the divs
+/*#region card*/
+.voice {
+	background-color: rgba(255, 255, 255, 0);
+	border-style: none;
+}
+.voice:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.open {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	background-color: #1db954;
+	border-radius: 50%;
+	justify-content: center;
+	align-content: center;
 
-        #Cpodcast {
-            background-color: blue;
-        }
-        #CmoodAndGenres {
-            background-color: red;
-        }
-        #CnewReleases {
-            background-color: black;
-        }
-        #Cdiscover {
-            background-color: chartreuse;
-        }
-********************************/
+	/*margin-right: 0;
+	margin-left: auto;*/
+}
+
+.open svg {
+	margin-top: 25%;
+	margin-left: 25%;
+	height: 50%;
+}
+/*#endregion*/
 /*#endregion*/
 /*#endregion*/
 /*region footer-player*/

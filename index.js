@@ -4,3 +4,7 @@ const switchTo = (E) => {
 	})
 	document.querySelector("#C" + E.target.id).classList.toggle("d-none")
 }
+
+const focusCard = (E) => {
+	E.target.querySelector(" .open").classList.toggle("d-none")
+}
