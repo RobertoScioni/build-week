@@ -16,6 +16,12 @@
 			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+			integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+			crossorigin="anonymous"
+		/>
 		<!-- Optional JavaScript; choose one of the two! -->
 		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 		<script
@@ -31,6 +37,7 @@
 		<!--#endregion-->
 		<link rel="stylesheet" href="assets/sidebar-styles.css" />
 		<link rel="stylesheet" href="assets/styles.css" />
+		<script src="index.js"></script>
 		<title>Hello, world!</title>
 	</head>
 	<body>
@@ -60,6 +67,94 @@
 				</div>
 			</div>
 			<!--#endregion-->
+			<!--#region body-->
+			<div class="container-fluid my-4 mx-0 p-0">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-light selector">
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-toggle="collapse"
+							data-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+									<a id="trending" class="nav-link" onclick="switchTo(event)"
+										>TRENDING</a
+									>
+								</li>
+								<li class="nav-item">
+									<a id="podcast" class="nav-link" onclick="switchTo(event)"
+										>PODCAST</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										id="moodAndGenres"
+										class="nav-link"
+										onclick="switchTo(event)"
+										>MOOD AND GENRES</a
+									>
+								</li>
+								<li class="nav-item">
+									<a id="newReleases" class="nav-link" onclick="switchTo(event)"
+										>NEW RELEASES</a
+									>
+								</li>
+								<li class="nav-item">
+									<a id="discover" class="nav-link" onclick="switchTo(event)"
+										>DISCOVER</a
+									>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+
+				<!--#region selector-->
+				<!--endregion-->
+				<!--#region grid-->
+				<div id="sections">
+					<div id="Ctrending" class="container-fluid section">TRENDING</div>
+					<div id="Cpodcast" class="container-fluid section d-none">
+						PODCAST
+					</div>
+					<div id="CmoodAndGenres" class="container-fluid section d-none">
+						moodAndGenres
+					</div>
+					<div id="CnewReleases" class="container-fluid section d-none">
+						newReleases
+					</div>
+					<div id="Cdiscover" class="container-fluid section d-none">
+						DISCOVER
+					</div>
+				</div>
+				<!--#endregion-->
+			</div>
+			<!--#endregion-->
 		</div>
+		<!--#region footer-->
+		<section class="footer-player">
+			<div class="d-flex flex-row justify-content-center">
+				<div class="p-2 ml-auto">
+					<i class="fas fa-random mr-3"></i>
+					<i class="fas fa-step-backward mr-3"></i>
+					<i class="far fa-play-circle mr-3"></i>
+					<i class="fas fa-step-forward mr-3"></i>
+					<i class="fas fa-redo-alt mr-3"></i>
+				</div>
+				<div class="p-2 ml-auto">
+					<i class="volum fas fa-volume-up"></i>
+				</div>
+			</div>
+		</section>
+		<!--#endregion-->
 	</body>
 </html>

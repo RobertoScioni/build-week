@@ -1,6 +1,47 @@
 /*#region redefinions for the sidebar*/
+#sidebar-wrapper {
+	min-height: 92.9vh;
+}
 /*#endregion*/
 /*#region bodystyles*/
+/*#region top bar*/
+.top-link {
+	padding-left: 2rem;
+	color: grey;
+}
+.section {
+	width: auto;
+	height: 300px; /* debug value*/
+	margin: 0;
+	padding: 0;
+	background-color: grey;
+}
+
+.selector {
+	width: fit-content;
+	margin: auto;
+}
+/* debug classes for the divs
+
+        #Cpodcast {
+            background-color: blue;
+        }
+        #CmoodAndGenres {
+            background-color: red;
+        }
+        #CnewReleases {
+            background-color: black;
+        }
+        #Cdiscover {
+            background-color: chartreuse;
+        }
+********************************/
+/*#endregion*/
 /*#endregion*/
 /*region footer-player*/
+.footer-player {
+	height: 7.1vh;
+	color: white;
+	background-color: black;
+}
 /*endregion*/
