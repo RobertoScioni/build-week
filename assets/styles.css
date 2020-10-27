@@ -4,6 +4,10 @@
 }
 /*#endregion*/
 /*#region bodystyles*/
+body {
+	height: 99vh;
+	line-height: 1.4; /*somehow this fixes the scrolling on chrome*/
+}
 /*#region top bar*/
 .top-link {
 	padding-left: 2rem;
@@ -54,7 +58,7 @@
 /*#endregion*/
 /*region footer-player*/
 .footer-player {
-	height: 10.1vh;
+	height: 10vh;
 	color: white;
 	background-color: #181818;
 }
