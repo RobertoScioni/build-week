@@ -1,0 +1,61 @@
+body {
+  background-color: #242625;
+}
+#sidebar-wrapper {
+  min-height: 89.9vh;
+  width: 350px;
+  color: white;
+  background-color: black;
+}
+.list-group-flush,
+.list-group-item {
+  background-color: black;
+  color: white;
+}
+.music-title {
+  display: inline-flex;
+}
+.footer-player {
+  height: 12.4v;
+  color: white;
+  background-color: #181818;
+}
+
+.player-buttons {
+  /*margin-top: 1rem;*/
+  border: none;
+  background-color: #181818;
+  color: white;
+}
+.music-length {
+  height: 3px;
+  width: 500px;
+  background-color: white;
+  margin-top: 11px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.volume {
+  height: 3px;
+  width: 90px;
+  background-color: white;
+  margin-top: 15px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.container {
+  color: white;
+  height: 700px;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: #242625;
+}
+.fa-music {
+  margin-top: 6px;
+  margin-right: 9px;
+}
+.queen {
+  margin-left: 20px;
+  color: #5b615e;
+  font-size: 14px;
+}
