@@ -9,13 +9,6 @@ const focusCard = (E) => {
 	E.target.querySelector(" .open").classList.toggle("d-none")
 }
 
-const homePageGrid={
-	trending{
-		
-	}
-}
-
-}
 const populateSelector = (voices) => {}
 
 const populateGrids = (grids) => {}

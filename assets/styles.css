@@ -64,6 +64,16 @@
 	background-color: #181818;
 	color: white;
 }
+/*#region sneaky*/
+/* not proud of this but it gets the job done*/
+.sneaky {
+	opacity: 0;
+}
+
+.sneaky * {
+	pointer-events: none;
+}
+/*#endregion**********************************/
 .music-length {
 	border-top: 3px solid white;
 	width: 500px;
