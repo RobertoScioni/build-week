@@ -85,9 +85,11 @@ const populateBody = (page) => {
 	folder.contents.forEach((element) => {
 		selector.push(element.name.slice(3))
 	})
+
+	console.log(selector)
 	populateSelector(selector)
 	//console.log(selector)
-	populateSelector(selector[0])
+	populateGrids(folder.contents)
 }
 
 const populateSelector = (voices) => {
@@ -122,6 +124,20 @@ const populateSelector = (voices) => {
 }
 
 const populateGrids = (selection) => {
-	const grid = document.querySelector("#C" + selection)
-	console.log(selection)
+	/**
+	 * example target container <div id="Ctrending" class="container-fluid section">
+	 *
+	 * id MUST be in the form of capital letter C followed by the lowercase selection name
+	 *
+	 */
+	const grid = document.querySelector(
+		"#C" + selection[0].name.slice(3).toLowerCase()
+	)
+	//console.log(selection)
+	//console.log(grid)
+	//clear the container
+	while (grid.firstChild) {
+		grid.removeChild(grid.firstChild)
+	}
+	//instantiate rows
 }
