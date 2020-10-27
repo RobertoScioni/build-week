@@ -9,10 +9,13 @@ const focusCard = (E) => {
 	E.target.querySelector(" .open").classList.toggle("d-none")
 }
 //#region object made by tree -J with a modicum of editing
+
+const coversRoot = "assets/img/covers/"
+
 const covers = [
 	{
 		type: "directory",
-		name: "assets/img/covers/artist",
+		name: "artist",
 		contents: [
 			{
 				type: "directory",
@@ -31,7 +34,7 @@ const covers = [
 	},
 	{
 		type: "directory",
-		name: "assets/img/covers/home",
+		name: "home",
 		contents: [
 			{
 				type: "directory",
@@ -70,6 +73,55 @@ const covers = [
 ]
 
 //#endregion
-const populateSelector = (voices) => {}
 
-const populateGrids = (grids) => {}
+const populateBody = (page) => {
+	let folder = null
+	covers.forEach((cover) => {
+		folder = cover.name === page ? cover : folder
+	})
+	//console.log(folder)
+
+	let selector = []
+	folder.contents.forEach((element) => {
+		selector.push(element.name.slice(3))
+	})
+	populateSelector(selector)
+	//console.log(selector)
+	populateSelector(selector[0])
+}
+
+const populateSelector = (voices) => {
+	/* example selector element
+ 		<li class="nav-item active">
+    		<a id="trending" class="nav-link" onclick="switchTo(event)">TRENDING</a>
+    	</li>
+	 */
+
+	//clear the selector
+	while (document.querySelector("#selector").firstChild) {
+		document
+			.querySelector("#selector")
+			.removeChild(document.querySelector("#selector").firstChild)
+	}
+
+	//create and fill the new elements
+	let first = true
+	voices.forEach((voice) => {
+		let ele = document.createElement("li")
+		ele.classList.add("nav-item")
+		if (first) {
+			ele.classList.add("active")
+			first = false
+		}
+		let lnk = document.createElement("a")
+		lnk.classList.add("nav-link")
+		lnk.innerText = voice.toUpperCase()
+		ele.appendChild(lnk)
+		document.querySelector("#selector").appendChild(ele)
+	})
+}
+
+const populateGrids = (selection) => {
+	const grid = document.querySelector("#C" + selection)
+	console.log(selection)
+}
