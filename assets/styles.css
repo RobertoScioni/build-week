@@ -56,11 +56,12 @@
 .footer-player {
 	height: 10.1vh;
 	color: white;
-	background-color: black;
+	background-color: #181818;
 }
 .player-buttons {
+	/*margin-top: 1rem;*/
 	border: none;
-	background-color: black;
+	background-color: #181818;
 	color: white;
 }
 .music-length {
