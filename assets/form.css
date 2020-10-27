@@ -1,18 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
+}
+.container {
+  max-width: 530px;
 }
 .logo > img {
   max-width: 100%;
   width: 200px;
 }
-.container {
-  max-width: 600px;
-}
+
 @media (max-width: 650px) {
   .container {
     max-width: 400px;
