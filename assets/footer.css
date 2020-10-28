@@ -12,6 +12,12 @@
   border: none;
   background-color: #181818;
   color: white;
+  transition: 0.4s;
+}
+.player-buttons:hover {
+  opacity: 0.5;
+  color: rgb(72, 235, 181);
+  opacity: 1;
 }
 /*#region sneaky*/
 /* not proud of this but it gets the job done*/
