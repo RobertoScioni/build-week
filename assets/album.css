@@ -1,19 +1,59 @@
 body {
-	background-color: #242625;
+  background-color: #343a40;
 }
 
 .list-group-flush,
 .list-group-item {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
 .music-title {
-	display: inline-flex;
+  display: inline-flex;
+}
+h2 {
+  margin-top: 20px;
+  color: rgb(72, 235, 181);
+  font-family: fangsong;
+  text-shadow: 2px 2px 2px 2px black;
+}
+ul {
+  list-style-type: none;
+  color: white;
+  font-family: "Font Awesome 5 Free";
+  font-size: 15;
 }
 
-/**
- * Dont remove
-*/
-#sidebar-wrapper {
-	position: fixed;
+.button1 {
+  width: 250px;
+  height: 50px;
+  background-color: #288f30;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 15px;
+  transition: 0.5s;
+}
+.button1:hover {
+  background-color: #1d5321;
+}
+h5 {
+  color: rgb(255, 255, 255);
+  font-size: 23px;
+  transition: 0.3s;
+}
+h5:hover {
+  opacity: 1;
+  color: rgb(72, 235, 181);
+}
+
+.fas {
+  margin-top: 9px;
+  margin-right: 15px;
+}
+.queen {
+  font-size: 14px;
+  color: #857c7c;
+  margin-left: 35px;
+}
+.mins {
+  float: right;
 }
