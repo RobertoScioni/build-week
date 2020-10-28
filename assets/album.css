@@ -1,12 +1,7 @@
 body {
   background-color: #242625;
 }
-#sidebar-wrapper {
-  min-height: 89.9vh;
-  width: 350px;
-  color: white;
-  background-color: black;
-}
+
 .list-group-flush,
 .list-group-item {
   background-color: black;
