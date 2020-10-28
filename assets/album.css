@@ -1,12 +1,19 @@
 body {
-  background-color: #242625;
+	background-color: #242625;
 }
 
 .list-group-flush,
 .list-group-item {
-  background-color: black;
-  color: white;
+	background-color: black;
+	color: white;
 }
 .music-title {
-  display: inline-flex;
+	display: inline-flex;
+}
+
+/**
+ * Dont remove
+*/
+#sidebar-wrapper {
+	position: fixed;
 }
