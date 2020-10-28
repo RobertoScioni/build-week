@@ -1,60 +1,15 @@
 body {
-	background-color: #242625;
+  background-color: #242625;
 }
 #sidebarwrapper {
-	position: fixed;
-	left: 0;
+  position: fixed;
+  left: 0;
 }
 .list-group-flush,
 .list-group-item {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
 .music-title {
-	display: inline-flex;
-}
-.footer-player {
-	height: 10vh;
-	position: fixed;
-	bottom: 0;
-	color: white;
-	background-color: #181818;
-	width: 100%;
-}
-
-.player-buttons {
-	/*margin-top: 1rem;*/
-	border: none;
-	background-color: #181818;
-	color: white;
-}
-.music-length {
-	height: 3px;
-	width: 500px;
-	background-color: white;
-	margin-top: 11px;
-	margin-right: 3px;
-	margin-left: 3px;
-}
-.volume {
-	height: 3px;
-	width: 90px;
-	background-color: white;
-	margin-top: 15px;
-	margin-right: 2px;
-	margin-left: 2px;
-}
-.container {
-	color: white;
-	height: 700px;
-	background-color: #242625;
-}
-.fa-music {
-	margin-top: 6px;
-	margin-right: 9px;
-}
-.queen {
-	margin-left: 20px;
-	color: #5b615e;
-	font-size: 14px;
+  display: inline-flex;
 }
