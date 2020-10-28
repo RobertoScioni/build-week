@@ -11,9 +11,12 @@ body {
   display: inline-flex;
 }
 .footer-player {
-  height: 12.4v;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
   color: white;
   background-color: #181818;
+  width: 100%;
 }
 
 .player-buttons {
@@ -41,8 +44,6 @@ body {
 .container {
   color: white;
   height: 700px;
-  overflow: hidden;
-  overflow-y: scroll;
   background-color: #242625;
 }
 .fa-music {
