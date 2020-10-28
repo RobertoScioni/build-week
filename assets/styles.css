@@ -1,61 +1,66 @@
 /*#region redefinions for the sidebar*/
 #sidebar-wrapper {
-  min-height: 89vh;
+	min-height: 89vh;
 }
 /*#endregion*/
 /*#region bodystyles*/
 body {
-  height: 99vh;
-  line-height: 1.4; /*somehow this fixes the scrolling on chrome*/
+	height: 99vh;
+	line-height: 1.4; /*somehow this fixes the scrolling on chrome*/
 }
 /*#region top bar*/
 .top-link {
-  padding-left: 2rem;
-  color: grey;
+	padding-left: 2rem;
+	color: grey;
 }
 .section {
-  width: auto;
-  height: 300px; /* debug value*/
-  margin: 0;
-  padding: 0;
-  /*background-color: grey;*/
+	width: auto;
+	height: 300px; /* debug value*/
+	margin: 0;
+	padding: 0;
+	/*background-color: grey;*/
 }
 
 .selector {
-  width: fit-content;
-  margin: auto;
+	width: fit-content;
+	margin: auto;
 }
 /*#region card*/
 .voice {
-  background-color: rgba(255, 255, 255, 0);
-  border-style: none;
-  color: whitesmoke;
-  text-align: center;
+	background-color: rgba(255, 255, 255, 0);
+	border-style: none;
+	color: whitesmoke;
+	text-align: center;
 }
 
 .voice .card-body {
-  max-width: 222px;
+	max-width: 222px;
 }
 .voice:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 .open {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  background-color: #1db954;
-  border-radius: 50%;
-  justify-content: center;
-  align-content: center;
+	display: none;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	background-color: #1db954;
+	border-radius: 50%;
+	justify-content: center;
+	align-content: center;
 
-  /*margin-right: 0;
+	/*margin-right: 0;
 	margin-left: auto;*/
 }
 
+.voice:hover .open {
+	display: block;
+}
+
 .open svg {
-  margin-top: 25%;
-  height: 50%;
+	margin-top: 25%;
+	height: 50%;
 }
 /*#endregion*/
 /*#endregion*/
