@@ -10,7 +10,7 @@ const focusCard = (E) => {
 }
 //#region object made by tree -J with a modicum of editing
 
-const coversRoot = "assets/img/covers/"
+const coversRoot = "assets/img/covers"
 
 const covers = [
 	{
@@ -42,17 +42,7 @@ const covers = [
 				contents: [
 					{
 						type: "directory",
-						name: "CLASSIFICHE",
-						contents: [
-							{ type: "file", name: "Top 50 - Global.png" },
-							{ type: "file", name: "Top 50 - Italy.png" },
-							{ type: "file", name: "Viral 50 - Global.png" },
-							{ type: "file", name: "Viral 50 - Italy.png" },
-						],
-					},
-					{
-						type: "directory",
-						name: "#TROWBACKTHURSDAY",
+						name: "01-#TROWBACKTHURSDAY",
 						contents: [
 							{ type: "file", name: "01-Italian Karaoke.png" },
 							{ type: "file", name: "02-Lyricists.png" },
@@ -60,6 +50,16 @@ const covers = [
 							{ type: "file", name: "04-00s italia.png" },
 							{ type: "file", name: "05-Cocktail Time.png" },
 							{ type: "file", name: "06-i love my 90s hip-hop.png" },
+						],
+					},
+					{
+						type: "directory",
+						name: "02-CLASSIFICHE",
+						contents: [
+							{ type: "file", name: "Top 50 - Global.png" },
+							{ type: "file", name: "Top 50 - Italy.png" },
+							{ type: "file", name: "Viral 50 - Global.png" },
+							{ type: "file", name: "Viral 50 - Italy.png" },
 						],
 					},
 				],
@@ -83,13 +83,15 @@ const populateBody = (page) => {
 
 	let selector = []
 	folder.contents.forEach((element) => {
-		selector.push(element.name.slice(3))
+		if (element.type === "directory") {
+			selector.push(element.name.slice(3))
+		}
 	})
 
-	console.log(selector)
+	//console.log(selector)
 	populateSelector(selector)
 	//console.log(selector)
-	populateGrids(folder.contents)
+	populateGrids(folder.contents, page)
 }
 
 const populateSelector = (voices) => {
@@ -123,7 +125,7 @@ const populateSelector = (voices) => {
 	})
 }
 
-const populateGrids = (selection) => {
+const populateGrids = (selection, page) => {
 	/**
 	 * example target container <div id="Ctrending" class="container-fluid section">
 	 *
@@ -133,11 +135,49 @@ const populateGrids = (selection) => {
 	const grid = document.querySelector(
 		"#C" + selection[0].name.slice(3).toLowerCase()
 	)
-	//console.log(selection)
+
+	const rowLabels = []
+
+	let category = selection[0]
+	//console.log(rowLabels)
+	//console.log("first grid", selection[0])
 	//console.log(grid)
 	//clear the container
 	while (grid.firstChild) {
 		grid.removeChild(grid.firstChild)
 	}
 	//instantiate rows
+	category.contents.forEach((row) => {
+		if (row.type === "directory") {
+			//rowLabels.push(row.name.slice(3))
+			const rowHeading = document.createElement("h3")
+			rowHeading.innerText = row.name
+			rowHeading.classList.add("text-light")
+			grid.appendChild(rowHeading)
+			const documentRow = document.createElement("div")
+			grid.appendChild(documentRow)
+			documentRow.classList.add("row")
+			row.contents.forEach((cell) => {
+				if (cell.type === "file") {
+					let newCard = document.querySelector(".templateCard").cloneNode(true)
+					newCard.classList.remove("d-none", "templateCard")
+					let src = [coversRoot, page, category.name, row.name, cell.name].join(
+						"/"
+					)
+					console.log("src", src)
+					console.log("encode", encodeURIComponent(src))
+					newCard.querySelector(".card-img-top").src = encodeURIComponent(
+						[coversRoot, page, category.name, row.name, cell.name].join("/")
+					)
+					newCard.querySelector(".card-img-top").alt = "cover image"
+					//	+category.name + "/" + row.name + "/" + cell.name
+					newCard.querySelector(".card-title").innerText = cell.name
+						.slice(3)
+						.slice(0, -4)
+					console.log("new card---", newCard)
+					documentRow.appendChild(newCard)
+				}
+			})
+		}
+	})
 }
