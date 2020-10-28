@@ -19,19 +19,32 @@ const covers = [
 		contents: [
 			{
 				type: "directory",
-				name: "01-QUEEN",
+				name: "01-OVERVIEW",
 				contents: [
 					{
 						type: "directory",
-						name: "01-OVERVIEW",
-						contents: [{ type: "directory", name: "Albums", contents: [] }],
+						name: "01-ALBUMS",
+						contents: [
+							{ type: "file", name: "01-Another one bites the dust.jpg" },
+							{ type: "file", name: "02-Body Language .jpg" },
+							{ type: "file", name: "03-Bohemian Rhapsody.png" },
+							{ type: "file", name: "04-Crazy little thing called love.jpg" },
+							{ type: "file", name: "05-Flash Gordon.jpg" },
+							{
+								type: "file",
+								name:
+									"06-Freddie Mecury and Montserrat Caballé - Barcelona.jpg",
+							},
+							{ type: "file", name: "07-Queen A Kind Of Magic.png" },
+						],
 					},
-					{ type: "directory", name: "02-RELATED ARTISTS", contents: [] },
-					{ type: "directory", name: "03-ABOUT", contents: [] },
 				],
 			},
+			{ type: "directory", name: "02-RELATED ARTISTS", contents: [] },
+			{ type: "directory", name: "03-ABOUT", contents: [] },
 		],
 	},
+	{ type: "file", name: "covers" },
 	{
 		type: "directory",
 		name: "home",
@@ -64,7 +77,14 @@ const covers = [
 					},
 				],
 			},
-			{ type: "directory", name: "02-PODCAST", contents: [] },
+			{
+				type: "directory",
+				name: "02-PODCAST",
+				contents: [
+					{ type: "file", name: "02-Lyricists.png" },
+					{ type: "file", name: "05-Cocktail Time.png" },
+				],
+			},
 			{ type: "directory", name: "03-MOOD AND GENRES", contents: [] },
 			{ type: "directory", name: "04-NEW RELEASES", contents: [] },
 			{ type: "directory", name: "05-DISCOVER", contents: [] },
@@ -108,13 +128,24 @@ const populateSelector = (voices) => {
 			.removeChild(document.querySelector("#selector").firstChild)
 	}
 
+	//and the grids
+	while (document.querySelector("#sections").firstChild) {
+		document
+			.querySelector("#sections")
+			.removeChild(document.querySelector("#sections").firstChild)
+	}
+
 	//create and fill the new elements
 	let first = true
 	voices.forEach((voice) => {
 		let ele = document.createElement("li")
 		ele.classList.add("nav-item")
+		let sel = document.createElement("div")
+		sel.classList.add("container-fluid", "section", "d-none")
+		sel.id = "C" + voice.toLowerCase()
 		if (first) {
 			ele.classList.add("active")
+			sel.classList.toggle("d-none")
 			first = false
 		}
 		let lnk = document.createElement("a")
@@ -123,6 +154,7 @@ const populateSelector = (voices) => {
 		lnk.addEventListener("click", switchTo)
 		ele.appendChild(lnk)
 		document.querySelector("#selector").appendChild(ele)
+		document.querySelector("#sections").appendChild(sel)
 	})
 }
 
