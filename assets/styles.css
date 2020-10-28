@@ -18,7 +18,6 @@ body {
 	height: 300px; /* debug value*/
 	margin: 0;
 	padding: 0;
-	/*background-color: grey;*/
 }
 
 .selector {
@@ -39,7 +38,9 @@ body {
 .voice:hover {
 	background-color: rgba(255, 255, 255, 0.3);
 }
+
 .open {
+	display: none;
 	position: absolute;
 	width: 40px;
 	height: 40px;
@@ -51,6 +52,10 @@ body {
 
 	/*margin-right: 0;
 	margin-left: auto;*/
+}
+
+.voice:hover .open {
+	display: block;
 }
 
 .open svg {

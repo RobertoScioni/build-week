@@ -5,9 +5,6 @@ const switchTo = (E) => {
 	document.querySelector("#C" + E.target.id).classList.toggle("d-none")
 }
 
-const focusCard = (E) => {
-	E.target.querySelector(" .open").classList.toggle("d-none")
-}
 //#region object made by tree -J with a modicum of editing
 
 const coversRoot = "assets/img/covers"
@@ -156,7 +153,7 @@ const populateGrids = (selection, page) => {
 			grid.appendChild(rowHeading)
 			const documentRow = document.createElement("div")
 			grid.appendChild(documentRow)
-			documentRow.classList.add("row")
+			documentRow.classList.add("row", "m-0")
 			row.contents.forEach((cell) => {
 				if (cell.type === "file") {
 					let newCard = document.querySelector(".templateCard").cloneNode(true)
@@ -175,8 +172,6 @@ const populateGrids = (selection, page) => {
 						.slice(3)
 						.slice(0, -4)
 					console.log("new card---", newCard)
-
-					newCard.addEventListener("mouseEnter", focusCard)
 					documentRow.appendChild(newCard)
 				}
 			})
