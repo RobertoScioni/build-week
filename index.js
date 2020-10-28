@@ -93,8 +93,27 @@ const covers = [
 ]
 
 //#endregion
+const testQuery = () => {
+	let search = window.location.search
+	let out
+	console.log(typeof search)
+	if (window.location.search === "") {
+		out = "home"
+	} else {
+		out = search
+	}
 
-const populateBody = (page) => {
+	/*let out =
+		window.location.search === ""
+			? "home"
+			: window.location.search.slice(1)
+*/
+	console.log(out)
+}
+
+const populateBody = (pagep) => {
+	let page =
+		window.location.search === "" ? "home" : window.location.search.slice(1)
 	let folder = null
 	covers.forEach((cover) => {
 		folder = cover.name === page ? cover : folder
