@@ -32,7 +32,7 @@
 	border-left: 5px solid #1db954;
 }
 .bg {
-	background-color: #111111;
+	background-color: #111111 !important;
 }
 
 @media (min-width: 768px) {
