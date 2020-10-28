@@ -1,0 +1,46 @@
+/*region footer-player*/
+.footer-player {
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  color: white;
+  background-color: #181818;
+}
+.player-buttons {
+  /*margin-top: 1rem;*/
+  border: none;
+  background-color: #181818;
+  color: white;
+}
+/*#region sneaky*/
+/* not proud of this but it gets the job done*/
+.sneaky {
+  opacity: 0;
+}
+
+.sneaky * {
+  pointer-events: none;
+}
+/*#endregion**********************************/
+.music-length {
+  height: 3px;
+  width: 500px;
+  background-color: white;
+  margin-top: 11px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.volume {
+  height: 3px;
+  width: 90px;
+  background-color: white;
+  margin-top: 11px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+h6 {
+  color: #aba9a9;
+}
+/*endregion*/
