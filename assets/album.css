@@ -1,9 +1,14 @@
 body {
 	background-color: #242625;
 }
+.album-body {
+	height: 100vh;
+}
+
 #sidebarwrapper {
 	position: fixed;
 	left: 0;
+	top: 0;
 }
 .list-group-flush,
 .list-group-item {
@@ -46,7 +51,8 @@ body {
 }
 .container {
 	color: white;
-	height: 700px;
+	height: 90vh;
+	overflow-y: scroll;
 	background-color: #242625;
 }
 .fa-music {

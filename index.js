@@ -175,6 +175,8 @@ const populateGrids = (selection, page) => {
 						.slice(3)
 						.slice(0, -4)
 					console.log("new card---", newCard)
+
+					newCard.addEventListener("mouseEnter", focusCard)
 					documentRow.appendChild(newCard)
 				}
 			})
