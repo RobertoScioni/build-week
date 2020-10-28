@@ -17,7 +17,7 @@
 }
 
 #sidebar-wrapper .list-group {
-  width: 227px;
+  width: 290px;
 }
 
 #page-content-wrapper {
@@ -29,7 +29,7 @@
 }
 
 .bg {
-  background-color: black;
+  background-color: #111111;
 }
 
 @media (min-width: 768px) {
