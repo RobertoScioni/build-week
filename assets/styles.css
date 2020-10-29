@@ -8,13 +8,14 @@ body {
 }
 
 .singleheader {
-	width: 100%;
+	width: 90%;
+	margin: auto;
 }
 
 .banner {
-	height: auto;
+	display: block;
 	width: 100%;
-	height: fit-content;
+	height: auto;
 	background: linear-gradient(
 		180deg,
 		rgba(0, 0, 0, 0) 0%,
@@ -23,11 +24,18 @@ body {
 	);
 }
 
+.sidefade {
+	background: radial-gradient(
+		circle,
+		rgba(37, 71, 111, 0) 50%,
+		rgba(54, 58, 64, 1) 90%
+	);
+}
+
 .banner img {
 	position: relative;
 	z-index: -1;
-	height: 30;
-	width: 100%;
+	height: auto;
 }
 
 /*#region top bar*/

@@ -140,11 +140,10 @@ const populateBody = (pagep) => {
 			selector.push(element.name.slice(3))
 		} else {
 			let banner = document.querySelector(".banner")
-
-			banner.querySelector("img").src = encodeURIComponent(
-				[coversRoot, page, element.name].join("/")
-			)
 			banner.classList.toggle("d-none")
+			let img = banner.querySelector("img")
+			img.src = encodeURIComponent([coversRoot, page, element.name].join("/"))
+			img.width = banner.offsetWidth
 		}
 	})
 
