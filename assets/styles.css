@@ -7,9 +7,13 @@ body {
 	height: 91vh;
 }
 
+.singleheader {
+	width: 100%;
+}
+
 .banner {
-	height: 30vh;
-	width: auto;
+	height: auto;
+	width: 100%;
 	height: fit-content;
 	background: linear-gradient(
 		180deg,
