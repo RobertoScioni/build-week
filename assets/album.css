@@ -78,16 +78,16 @@ h5:hover {
   text-align: center;
 }
 .songList {
-  box-shadow: inset 0px 15px 8px -10px #ccc, inset 0px -15px 8px -10px #ccc;
+  /* box-shadow: inset 0px 15px 8px -10px #ccc, inset 0px -15px 8px -10px #ccc; */
   overflow: hidden;
   overflow-y: scroll;
-  height: 680px;
-  width: 600px;
+  height: 900px;
+  width: 900px;
   padding: 25px;
 }
 .mastersongList {
   overflow: hidden;
-  height: 680px;
-  width: 600px;
+  height: 900px;
+  width: 900px;
   padding-left: 25px;
 }
