@@ -2,6 +2,11 @@ const switchTo = (E) => {
 	document.querySelectorAll("#sections > .section").forEach((section) => {
 		section.classList.add("d-none")
 	})
+
+	document.querySelectorAll("#selector li").forEach((section) => {
+		section.classList.remove("active")
+	})
+	E.target.classList.toggle("active")
 	document.querySelector("#C" + E.target.id).classList.toggle("d-none")
 }
 
@@ -17,6 +22,7 @@ const covers = [
 		type: "directory",
 		name: "artist",
 		contents: [
+			{ type: "file", name: "Cover.jpg" },
 			{
 				type: "directory",
 				name: "01-OVERVIEW",
@@ -119,11 +125,26 @@ const populateBody = (pagep) => {
 		folder = cover.name === page ? cover : folder
 	})
 	//console.log(folder)
-
+	//clear colors?
+	let singleBody = document.querySelector(".singleBody")
+	singleBody.classList.forEach((cssClass) => {
+		if (cssClass.startsWith("page-")) {
+			singleBody.classList.remove(cssClass)
+		}
+	})
+	//link correct colors
+	singleBody.classList.add("page-" + page)
 	let selector = []
 	folder.contents.forEach((element) => {
 		if (element.type === "directory") {
 			selector.push(element.name.slice(3))
+		} else {
+			let banner = document.querySelector(".banner")
+
+			banner.querySelector("img").src = encodeURIComponent(
+				[coversRoot, page, element.name].join("/")
+			)
+			banner.classList.toggle("d-none")
 		}
 	})
 
@@ -167,11 +188,16 @@ const populateSelector = (voices) => {
 			sel.classList.toggle("d-none")
 			first = false
 		}
-		let lnk = document.createElement("a")
-		lnk.classList.add("nav-link")
-		lnk.innerText = voice.toUpperCase()
-		lnk.addEventListener("click", switchTo)
-		ele.appendChild(lnk)
+		//let lnk = document.createElement("a")
+		//lnk.id = voice.toLowerCase()
+		//lnk.classList.add("nav-link")
+		//lnk.innerText = voice.toUpperCase()
+		//lnk.addEventListener("click", switchTo)
+		ele.id = voice.toLowerCase()
+		ele.innerText = voice.toUpperCase()
+		ele.addEventListener("click", switchTo)
+		ele.classList.add("nav-link")
+		//ele.appendChild(lnk)
 		document.querySelector("#selector").appendChild(ele)
 		document.querySelector("#sections").appendChild(sel)
 	})
@@ -186,52 +212,54 @@ const populateGrids = (selection, page) => {
 	 */
 	let category = selection[0]
 	selection.forEach((category) => {
-		const grid = document.querySelector(
-			"#C" + category.name.slice(3).toLowerCase()
-		)
-		//clear the container
-		while (grid.firstChild) {
-			grid.removeChild(grid.firstChild)
-		}
-		//instantiate rows
-		category.contents.forEach((row) => {
-			if (row.type === "directory") {
-				//rowLabels.push(row.name.slice(3))
-				const rowHeading = document.createElement("h3")
-				rowHeading.innerText = row.name
-				rowHeading.classList.add("text-light")
-				grid.appendChild(rowHeading)
-				const documentRow = document.createElement("div")
-				grid.appendChild(documentRow)
-				documentRow.classList.add("row", "m-0")
-				row.contents.forEach((cell) => {
-					if (cell.type === "file") {
-						let newCard = document
-							.querySelector(".templateCard")
-							.cloneNode(true)
-						newCard.classList.remove("d-none", "templateCard")
-						let src = [
-							coversRoot,
-							page,
-							category.name,
-							row.name,
-							cell.name,
-						].join("/")
-						console.log("src", src)
-						console.log("encode", encodeURIComponent(src))
-						newCard.querySelector(".card-img-top").src = encodeURIComponent(
-							[coversRoot, page, category.name, row.name, cell.name].join("/")
-						)
-						newCard.querySelector(".card-img-top").alt = "cover image"
-						//	+category.name + "/" + row.name + "/" + cell.name
-						newCard.querySelector(".card-title").innerText = cell.name
-							.slice(3)
-							.slice(0, -4)
-						console.log("new card---", newCard)
-						documentRow.appendChild(newCard)
-					}
-				})
+		if (category.type === "directory") {
+			const grid = document.querySelector(
+				"#C" + category.name.slice(3).toLowerCase()
+			)
+			//clear the container
+			while (grid.firstChild) {
+				grid.removeChild(grid.firstChild)
 			}
-		})
+			//instantiate rows
+			category.contents.forEach((row) => {
+				if (row.type === "directory") {
+					//rowLabels.push(row.name.slice(3))
+					const rowHeading = document.createElement("h3")
+					rowHeading.innerText = row.name.slice(3)
+					rowHeading.classList.add("text-light")
+					grid.appendChild(rowHeading)
+					const documentRow = document.createElement("div")
+					grid.appendChild(documentRow)
+					documentRow.classList.add("row", "m-0")
+					row.contents.forEach((cell) => {
+						if (cell.type === "file") {
+							let newCard = document
+								.querySelector(".templateCard")
+								.cloneNode(true)
+							newCard.classList.remove("d-none", "templateCard")
+							let src = [
+								coversRoot,
+								page,
+								category.name,
+								row.name,
+								cell.name,
+							].join("/")
+							console.log("src", src)
+							console.log("encode", encodeURIComponent(src))
+							newCard.querySelector(".card-img-top").src = encodeURIComponent(
+								src
+							)
+							newCard.querySelector(".card-img-top").alt = "cover image"
+							//	+category.name + "/" + row.name + "/" + cell.name
+							newCard.querySelector(".card-title").innerText = cell.name
+								.slice(3)
+								.slice(0, -4)
+							console.log("new card---", newCard)
+							documentRow.appendChild(newCard)
+						}
+					})
+				}
+			})
+		}
 	})
 }

@@ -16,6 +16,7 @@
 			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 			crossorigin="anonymous"
 		/>
+		<!--#region Font Awesome-->
 		<link
 			rel="stylesheet"
 			href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -28,6 +29,7 @@
 			integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
 			crossorigin="anonymous"
 		/>
+		<!--#endregion-->
 		<!-- Optional JavaScript; choose one of the two! -->
 		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 		<script
@@ -44,6 +46,7 @@
 		<link rel="stylesheet" href="assets/sidebar-styles.css" />
 		<link rel="stylesheet" href="assets/styles.css" />
 		<link rel="stylesheet" href="assets/footer.css" />
+		<link rel="stylesheet" href="assets/colors.css" />
 		<link
 			rel="icon"
 			sizes="32x32"
@@ -109,8 +112,14 @@
 			<!--#endregion-->
 			<!--#region body-->
 			<!--#region selector-->
-			<div class="container-fluid overflow-auto bg-dark my-0 mx-0 p-0">
-				<div class="container">
+			<div
+				class="container-fluid overflow-auto my-0 mx-0 p-0 page-home singleBody"
+			>
+				<!--artist cover template-->
+				<div class="container-fluid justify-content-center p-0 singleHeader">
+					<div class="banner mx-auto d-none">
+						<img src="assets/img/covers/artist/Cover.jpg" alt="" />
+					</div>
 					<nav class="navbar navbar-expand-lg navbar-dark selector">
 						<button
 							class="navbar-toggler"
@@ -126,41 +135,14 @@
 
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul id="selector" class="navbar-nav mr-auto">
-								<li class="nav-item active">
-									<a id="trending" class="nav-link" onclick="switchTo(event)"
-										>TRENDING</a
-									>
-								</li>
-								<li class="nav-item">
-									<a id="podcast" class="nav-link" onclick="switchTo(event)"
-										>PODCAST</a
-									>
-								</li>
-								<li class="nav-item">
-									<a
-										id="moodAndGenres"
-										class="nav-link"
-										onclick="switchTo(event)"
-										>MOOD AND GENRES</a
-									>
-								</li>
-								<li class="nav-item">
-									<a id="newReleases" class="nav-link" onclick="switchTo(event)"
-										>NEW RELEASES</a
-									>
-								</li>
-								<li class="nav-item">
-									<a id="discover" class="nav-link" onclick="switchTo(event)"
-										>DISCOVER</a
-									>
-								</li>
+								<!--container for the selector voices-->
 							</ul>
 						</div>
 					</nav>
 				</div>
 				<!--endregion-->
 				<!--#region grid-->
-				<!--#region template-card-->
+				<!--#region template-card DO NOT DELETE-->
 				<div class="col p-4 col-auto d-none templateCard">
 					<div class="card voice">
 						<div class="d-flex p-0 flex-row align-items-end flex-row-reverse">
@@ -190,195 +172,8 @@
 					</div>
 				</div>
 				<!--#endregion-->
-				<div id="sections">
-					<div id="Ctrending" class="container-fluid section">
-						<div class="row mx-0">
-							<!--#region extra cards>
-							<div
-								class="card col p-4 col-12 col-lg-3 voice"
-								onmouseover="focusCard(event)"
-							>
-								<div
-									class="d-flex p-0 flex-row align-items-end flex-row-reverse"
-								>
-									<img
-										src="https://placehold.it/300x300"
-										class="card-img-top"
-										alt="..."
-									/>
-									<div class="flex open align-middle align-center d-none">
-										<svg
-											role="img"
-											viewBox="0 0 24 24"
-											aria-hidden="true"
-											class="flex align-middle"
-										>
-											<polygon
-												points="21.57 12 5.98 3 5.98 21 21.57 12"
-												fill="currentColor"
-											></polygon>
-										</svg>
-									</div>
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-							</div>
-							<div
-								class="card col p-4 col-12 col-lg-3 voice"
-								onmouseover="focusCard(event)"
-							>
-								<div
-									class="d-flex p-0 flex-row align-items-end flex-row-reverse"
-								>
-									<img
-										src="https://placehold.it/300x300"
-										class="card-img-top"
-										alt="..."
-									/>
-									<div class="flex open align-middle align-center d-none">
-										<svg
-											role="img"
-											viewBox="0 0 24 24"
-											aria-hidden="true"
-											class="flex align-middle"
-										>
-											<polygon
-												points="21.57 12 5.98 3 5.98 21 21.57 12"
-												fill="currentColor"
-											></polygon>
-										</svg>
-									</div>
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-							</div>
-							<div
-								class="card col p-4 col-12 col-lg-3 voice"
-								onmouseover="focusCard(event)"
-							>
-								<div
-									class="d-flex p-0 flex-row align-items-end flex-row-reverse"
-								>
-									<img
-										src="https://placehold.it/300x300"
-										class="card-img-top"
-										alt="..."
-									/>
-									<div class="flex open align-middle align-center d-none">
-										<svg
-											role="img"
-											viewBox="0 0 24 24"
-											aria-hidden="true"
-											class="flex align-middle"
-										>
-											<polygon
-												points="21.57 12 5.98 3 5.98 21 21.57 12"
-												fill="currentColor"
-											></polygon>
-										</svg>
-									</div>
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-							</div>
-							<div
-								class="card col p-4 col-12 col-lg-3 voice"
-								onmouseover="focusCard(event)"
-							>
-								<div
-									class="d-flex p-0 flex-row align-items-end flex-row-reverse"
-								>
-									<img
-										src="https://placehold.it/300x300"
-										class="card-img-top"
-										alt="..."
-									/>
-									<div class="flex open align-middle align-center d-none">
-										<svg
-											role="img"
-											viewBox="0 0 24 24"
-											aria-hidden="true"
-											class="flex align-middle"
-										>
-											<polygon
-												points="21.57 12 5.98 3 5.98 21 21.57 12"
-												fill="currentColor"
-											></polygon>
-										</svg>
-									</div>
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-							</div>
-							<div
-								class="card col p-4 col-12 col-lg-3 voice"
-								onmouseover="focusCard(event)"
-							>
-								<div
-									class="d-flex p-0 flex-row align-items-end flex-row-reverse"
-								>
-									<img
-										src="https://placehold.it/300x300"
-										class="card-img-top"
-										alt="..."
-									/>
-									<div class="flex open align-middle align-center d-none">
-										<svg
-											role="img"
-											viewBox="0 0 24 24"
-											aria-hidden="true"
-											class="flex align-middle"
-										>
-											<polygon
-												points="21.57 12 5.98 3 5.98 21 21.57 12"
-												fill="currentColor"
-											></polygon>
-										</svg>
-									</div>
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-							</div>
-							<#endregion-->
-						</div>
-					</div>
-					<div id="Cpodcast" class="container-fluid section d-none">
-						PODCAST
-					</div>
-					<div id="CmoodAndGenres" class="container-fluid section d-none">
-						moodAndGenres
-					</div>
-					<div id="CnewReleases" class="container-fluid section d-none">
-						newReleases
-					</div>
-					<div id="Cdiscover" class="container-fluid section d-none">
-						DISCOVER
-					</div>
+				<div id="sections" class="px-4">
+					<!--container for grid of covers-->
 				</div>
 				<!--#endregion-->
 			</div>

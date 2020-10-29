@@ -1,8 +1,31 @@
 /*#region bodystyles*/
 body {
 	height: 99vh;
-	line-height: 1.4; /*somehow this fixes the scrolling on chrome*/
 }
+
+.singleBody {
+	height: 91vh;
+}
+
+.banner {
+	height: 30vh;
+	width: auto;
+	height: fit-content;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(53, 58, 64, 0.7399334733893557) 68%,
+		rgba(53, 58, 64, 1) 85%
+	);
+}
+
+.banner img {
+	position: relative;
+	z-index: -1;
+	height: 30;
+	width: 100%;
+}
+
 /*#region top bar*/
 .top-link {
 	padding-left: 2rem;
@@ -26,6 +49,7 @@ body {
 	border-style: none;
 	color: whitesmoke;
 	text-align: center;
+	padding: 5px;
 }
 
 .voice .card-body {
