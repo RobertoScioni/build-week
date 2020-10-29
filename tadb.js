@@ -78,3 +78,5 @@ const covers = [
 		],
 	},
 ]
+
+export { covers }

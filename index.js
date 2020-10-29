@@ -97,7 +97,6 @@ const covers = [
 		],
 	},
 ]
-
 //#endregion
 const testQuery = () => {
 	let search = window.location.search
@@ -200,6 +199,8 @@ const populateSelector = (voices) => {
 		document.querySelector("#selector").appendChild(ele)
 		document.querySelector("#sections").appendChild(sel)
 	})
+	//let sel = document.createElement("hr")
+	//document.querySelector("#selector").appendChild(sel)
 }
 
 const populateGrids = (selection, page) => {
