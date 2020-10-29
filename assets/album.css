@@ -9,6 +9,12 @@ body {
 }
 .music-title {
   display: inline-flex;
+  transition: 0.3s;
+}
+.music-title:hover {
+  background-color: rgb(101, 194, 197);
+  border-radius: 10px;
+  padding: 5px;
 }
 h2 {
   margin-top: 20px;
@@ -42,7 +48,8 @@ h5 {
 }
 h5:hover {
   opacity: 1;
-  color: rgb(72, 235, 181);
+  color: black;
+  font-weight: bolder;
 }
 
 .fas {
@@ -66,6 +73,18 @@ h5:hover {
   position: fixed;
 }
 .albumCover {
+  margin-left: 130px;
+}
+.albumSongs {
+  margin-bottom: 13rem;
+}
+.fixed {
   position: fixed;
-  margin-left: -430px;
+  text-align: center;
+}
+.songList {
+  width: 600px;
+  padding: 30px;
+  box-shadow: inset 5px 5px 5px #fff, 8px 8px 8px #fff;
+  margin-bottom: 13rem;
 }
