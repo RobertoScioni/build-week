@@ -22,7 +22,7 @@ const covers = [
 		type: "directory",
 		name: "artist",
 		contents: [
-			{ type: "file", name: "Cover.jpg" },
+			{ type: "file", name: "QUEEN.jpg" },
 			{
 				type: "directory",
 				name: "01-OVERVIEW",
@@ -140,9 +140,7 @@ const populateBody = (pagep) => {
 		} else {
 			let banner = document.querySelector(".banner")
 			banner.classList.toggle("d-none")
-			let img = banner.querySelector("img")
-			img.src = encodeURIComponent([coversRoot, page, element.name].join("/"))
-			img.width = banner.offsetWidth
+			banner.querySelector(".artistName").innerText = element.name.slice(0, -4)
 		}
 	})
 
