@@ -72,7 +72,7 @@ h5:hover {
 }
 
 .albumSongs {
-  margin-bottom: 6rem;
+  margin-bottom: 9rem;
 }
 .fixed {
   text-align: center;
@@ -81,13 +81,12 @@ h5:hover {
   /* box-shadow: inset 0px 15px 8px -10px #ccc, inset 0px -15px 8px -10px #ccc; */
   overflow: hidden;
   overflow-y: scroll;
-  height: 900px;
-  width: 900px;
-  padding: 25px;
+  height: 700px;
+  width: 583px;
 }
 .mastersongList {
   overflow: hidden;
-  height: 900px;
-  width: 900px;
+  height: 700px;
+  width: 590px;
   padding-left: 25px;
 }
