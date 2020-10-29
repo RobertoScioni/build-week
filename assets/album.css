@@ -1,61 +1,68 @@
 body {
-	background-color: #343a40;
+  background-color: #343a40;
 }
 
 .list-group-flush,
 .list-group-item {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
 .music-title {
-	display: inline-flex;
+  display: inline-flex;
+  transition: 0.3s;
+}
+.music-title:hover {
+  background-color: rgb(101, 194, 197);
+  border-radius: 10px;
+  padding: 5px;
 }
 h2 {
-	margin-top: 20px;
-	color: rgb(72, 235, 181);
-	font-family: fangsong;
-	text-shadow: 2px 2px 2px 2px black;
+  margin-top: 20px;
+  color: rgb(72, 235, 181);
+  font-family: fangsong;
+  text-shadow: 2px 2px 2px 2px black;
 }
 ul {
-	list-style-type: none;
-	color: white;
-	font-family: "Font Awesome 5 Free";
-	font-size: 15;
+  list-style-type: none;
+  color: white;
+  font-family: "Font Awesome 5 Free";
+  font-size: 15;
 }
 
 .button1 {
-	width: 250px;
-	height: 50px;
-	background-color: #288f30;
-	border-radius: 20px;
-	color: white;
-	margin-bottom: 15px;
-	transition: 0.5s;
+  width: 250px;
+  height: 50px;
+  background-color: #288f30;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 15px;
+  transition: 0.5s;
 }
 .button1:hover {
-	background-color: #1d5321;
+  background-color: #1d5321;
 }
 h5 {
-	color: rgb(255, 255, 255);
-	font-size: 23px;
-	transition: 0.3s;
+  color: rgb(255, 255, 255);
+  font-size: 23px;
+  transition: 0.3s;
 }
 h5:hover {
-	opacity: 1;
-	color: rgb(72, 235, 181);
+  opacity: 1;
+  color: black;
+  font-weight: bolder;
 }
 
 .fas {
-	margin-top: 9px;
-	margin-right: 15px;
+  margin-top: 9px;
+  margin-right: 15px;
 }
 .queen {
-	font-size: 14px;
-	color: #857c7c;
-	margin-left: 35px;
+  font-size: 14px;
+  color: #857c7c;
+  margin-left: 35px;
 }
 .mins {
-	float: right;
+  float: right;
 }
 
 /**
@@ -63,15 +70,21 @@ h5:hover {
 */
 
 #sidebar-wrapper {
-	position: fixed;
+  position: fixed;
 }
-
-.album-body {
-	left: 30%;
-}
-
 .albumCover {
-	width: fit-content;
-	position: fixed;
-	left: 25%;
+  margin-left: 130px;
+}
+.albumSongs {
+  margin-bottom: 13rem;
+}
+.fixed {
+  position: fixed;
+  text-align: center;
+}
+.songList {
+  width: 600px;
+  padding: 30px;
+  box-shadow: inset 5px 5px 5px #fff, 8px 8px 8px #fff;
+  margin-bottom: 13rem;
 }
