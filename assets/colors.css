@@ -1,0 +1,11 @@
+.page-home {
+	background: linear-gradient(
+		-45deg,
+		rgba(37, 71, 111, 1) 0%,
+		rgba(53, 58, 64, 1) 85%
+	);
+}
+
+.page-artist {
+	/*background: rgba(53, 58, 64, 1);*/
+}

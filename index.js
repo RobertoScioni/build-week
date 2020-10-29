@@ -125,7 +125,15 @@ const populateBody = (pagep) => {
 		folder = cover.name === page ? cover : folder
 	})
 	//console.log(folder)
-
+	//clear colors?
+	let singleBody = document.querySelector(".singleBody")
+	singleBody.classList.forEach((cssClass) => {
+		if (cssClass.startsWith("page-")) {
+			singleBody.classList.remove(cssClass)
+		}
+	})
+	//link correct colors
+	singleBody.classList.add("page-" + page)
 	let selector = []
 	folder.contents.forEach((element) => {
 		if (element.type === "directory") {
@@ -239,7 +247,7 @@ const populateGrids = (selection, page) => {
 							console.log("src", src)
 							console.log("encode", encodeURIComponent(src))
 							newCard.querySelector(".card-img-top").src = encodeURIComponent(
-								[coversRoot, page, category.name, row.name, cell.name].join("/")
+								src
 							)
 							newCard.querySelector(".card-img-top").alt = "cover image"
 							//	+category.name + "/" + row.name + "/" + cell.name
