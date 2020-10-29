@@ -1,0 +1,78 @@
+[{"type":"directory","name": ".","contents":[
+    {"type":"directory","name":"artist","contents":[
+      {"type":"directory","name":"01-OVERVIEW","contents":[
+        {"type":"directory","name":"01-ALBUMS","contents":[
+          {"type":"file","name":"01-Another one bites the dust.jpg"},
+          {"type":"file","name":"02-Body Language .jpg"},
+          {"type":"file","name":"03-Bohemian Rhapsody.png"},
+          {"type":"file","name":"04-Crazy little thing called love.jpg"},
+          {"type":"file","name":"05-Flash Gordon.jpg"},
+          {"type":"file","name":"06-Freddie Mecury and Montserrat Caballé - Barcelona.jpg"},
+          {"type":"file","name":"07-Queen A Kind Of Magic.png"}
+        ]}
+      ]},
+      {"type":"directory","name":"02-RELATED ARTISTS","contents":[
+        {"type":"directory","name":"01-SIMILAR","contents":[
+          {"type":"file","name":"01-ALICE COOPER.jpg"},
+          {"type":"file","name":"02-JOURNEY.jpg"}
+        ]},
+        {"type":"directory","name":"02-INFLUENCED BY","contents":[
+          {"type":"file","name":"02-BEATLES.jpg"},
+          {"type":"file","name":"02-LED ZEPPELIN.jpg"},
+          {"type":"file","name":"03-JIMI HENDRIX.jpg"}
+        ]}
+      ]},
+      {"type":"directory","name":"03-ABOUT","contents":[
+        {"type":"directory","name":"01-media","contents":[
+          {"type":"file","name":"01-ok this was thicky.png"}
+        ]}
+      ]},
+      {"type":"file","name":"QUEEN.jpg"}
+    ]},
+    {"type":"file","name":"covers"},
+    {"type":"file","name":"covers.json"},
+    {"type":"directory","name":"home","contents":[
+      {"type":"directory","name":"01-TRENDING","contents":[
+        {"type":"directory","name":"01-#TROWBACKTHURSDAY","contents":[
+          {"type":"file","name":"01-Italian Karaoke.png"},
+          {"type":"file","name":"02-Lyricists.png"},
+          {"type":"file","name":"03-Italy's Frequent Rotation.png"},
+          {"type":"file","name":"04-00s italia.png"},
+          {"type":"file","name":"05-Cocktail Time.png"},
+          {"type":"file","name":"06-i love my 90s hip-hop.png"}
+        ]},
+        {"type":"directory","name":"02-CLASSIFICHE","contents":[
+          {"type":"file","name":"Top 50 - Global.png"},
+          {"type":"file","name":"Top 50 - Italy.png"},
+          {"type":"file","name":"Viral 50 - Global.png"},
+          {"type":"file","name":"Viral 50 - Italy.png"}
+        ]}
+      ]},
+      {"type":"directory","name":"02-PODCAST","contents":[
+        {"type":"directory","name":"01-RPG","contents":[
+          {"type":"file","name":"01-REVIVAL.jpg"},
+          {"type":"file","name":"02-hype-space-a-starfinder-real-play-podcast.jpg"},
+          {"type":"file","name":"03-tabletop-champions.jpg"}
+        ]}
+      ]},
+      {"type":"directory","name":"03-MOOD AND GENRES","contents":[
+        {"type":"directory","name":"01-EPIC","contents":[
+          {"type":"file","name":"01 Europe the final countdown.jpg"},
+          {"type":"file","name":"02 Rhapsody symphony of the enchanted lands.jpg"},
+          {"type":"file","name":"03 Visions   Stratovarius2.jpg"}
+        ]}
+      ]},
+      {"type":"directory","name":"04-NEW RELEASES","contents":[
+        {"type":"directory","name":"01-Local","contents":[
+          {"type":"file","name":"01-BRUTE FORCE.jpg"}
+        ]}
+      ]},
+      {"type":"directory","name":"05-DISCOVER","contents":[
+        {"type":"directory","name":"01-HOT STUFF","contents":[
+          {"type":"file","name":"01-LOL SO FUNNY.jpg"}
+        ]}
+      ]}
+    ]}
+  ]},
+  {"type":"report","directories":20,"files":34}
+]

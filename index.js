@@ -1,3 +1,5 @@
+const server = false
+
 const switchTo = (E) => {
 	document.querySelectorAll("#sections > .section").forEach((section) => {
 		section.classList.add("d-none")
@@ -22,7 +24,6 @@ const covers = [
 		type: "directory",
 		name: "artist",
 		contents: [
-			{ type: "file", name: "QUEEN.jpg" },
 			{
 				type: "directory",
 				name: "01-OVERVIEW",
@@ -46,11 +47,45 @@ const covers = [
 					},
 				],
 			},
-			{ type: "directory", name: "02-RELATED ARTISTS", contents: [] },
-			{ type: "directory", name: "03-ABOUT", contents: [] },
+			{
+				type: "directory",
+				name: "02-RELATED ARTISTS",
+				contents: [
+					{
+						type: "directory",
+						name: "01-SIMILAR",
+						contents: [
+							{ type: "file", name: "01-ALICE COOPER.jpg" },
+							{ type: "file", name: "02-JOURNEY.jpg" },
+						],
+					},
+					{
+						type: "directory",
+						name: "02-INFLUENCED BY",
+						contents: [
+							{ type: "file", name: "02-BEATLES.jpg" },
+							{ type: "file", name: "02-LED ZEPPELIN.jpg" },
+							{ type: "file", name: "03-JIMI HENDRIX.jpg" },
+						],
+					},
+				],
+			},
+			{
+				type: "directory",
+				name: "03-ABOUT",
+				contents: [
+					{
+						type: "directory",
+						name: "01-media",
+						contents: [{ type: "file", name: "01-ok this was tricky.png" }],
+					},
+				],
+			},
+			{ type: "file", name: "QUEEN.jpg" },
 		],
 	},
 	{ type: "file", name: "covers" },
+	{ type: "file", name: "covers.json" },
 	{
 		type: "directory",
 		name: "home",
@@ -87,16 +122,64 @@ const covers = [
 				type: "directory",
 				name: "02-PODCAST",
 				contents: [
-					{ type: "file", name: "02-Lyricists.png" },
-					{ type: "file", name: "05-Cocktail Time.png" },
+					{
+						type: "directory",
+						name: "01-RPG",
+						contents: [
+							{ type: "file", name: "01-REVIVAL.jpg" },
+							{
+								type: "file",
+								name: "02-hype-space-a-starfinder-real-play-podcast.jpg",
+							},
+							{ type: "file", name: "03-tabletop-champions.jpg" },
+						],
+					},
 				],
 			},
-			{ type: "directory", name: "03-MOOD AND GENRES", contents: [] },
-			{ type: "directory", name: "04-NEW RELEASES", contents: [] },
-			{ type: "directory", name: "05-DISCOVER", contents: [] },
+			{
+				type: "directory",
+				name: "03-MOOD AND GENRES",
+				contents: [
+					{
+						type: "directory",
+						name: "01-EPIC",
+						contents: [
+							{ type: "file", name: "01 Europe the final countdown.jpg" },
+							{
+								type: "file",
+								name: "02 Rhapsody symphony of the enchanted lands.jpg",
+							},
+							{ type: "file", name: "03 Visions   Stratovarius2.jpg" },
+						],
+					},
+				],
+			},
+			{
+				type: "directory",
+				name: "04-NEW RELEASES",
+				contents: [
+					{
+						type: "directory",
+						name: "01-Local",
+						contents: [{ type: "file", name: "01-BRUTE FORCE.jpg" }],
+					},
+				],
+			},
+			{
+				type: "directory",
+				name: "05-DISCOVER",
+				contents: [
+					{
+						type: "directory",
+						name: "01-HOT STUFF",
+						contents: [{ type: "file", name: "01-LOL SO FUNNY.jpg" }],
+					},
+				],
+			},
 		],
 	},
 ]
+
 //#endregion
 const testQuery = () => {
 	let search = window.location.search
@@ -178,7 +261,7 @@ const populateSelector = (voices) => {
 		ele.classList.add("nav-item")
 		let sel = document.createElement("div")
 		sel.classList.add("container-fluid", "section", "d-none")
-		sel.id = "C" + voice.toLowerCase()
+		sel.id = "C" + voice.toLowerCase().replace(/\s/g, "")
 		if (first) {
 			ele.classList.add("active")
 			sel.classList.toggle("d-none")
@@ -189,7 +272,7 @@ const populateSelector = (voices) => {
 		//lnk.classList.add("nav-link")
 		//lnk.innerText = voice.toUpperCase()
 		//lnk.addEventListener("click", switchTo)
-		ele.id = voice.toLowerCase()
+		ele.id = voice.toLowerCase().replace(/\s/g, "")
 		ele.innerText = voice.toUpperCase()
 		ele.addEventListener("click", switchTo)
 		ele.classList.add("nav-link")
@@ -212,11 +295,13 @@ const populateGrids = (selection, page) => {
 	selection.forEach((category) => {
 		if (category.type === "directory") {
 			const grid = document.querySelector(
-				"#C" + category.name.slice(3).toLowerCase()
+				"#C" + category.name.slice(3).toLowerCase().replace(/\s/g, "")
 			)
 			//clear the container
-			while (grid.firstChild) {
-				grid.removeChild(grid.firstChild)
+			if (grid) {
+				while (grid.firstChild) {
+					grid.removeChild(grid.firstChild)
+				}
 			}
 			//instantiate rows
 			category.contents.forEach((row) => {
