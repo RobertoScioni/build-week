@@ -2,7 +2,9 @@
 body {
 	height: 99vh;
 }
-
+:is(h1, h2, h3, h4, h5, h6) {
+	font-weight: 700;
+}
 .singleBody {
 	height: 91vh;
 }
@@ -10,6 +12,10 @@ body {
 .singleheader {
 	width: 90%;
 	margin: auto;
+}
+
+.btn {
+	font-weight: 700;
 }
 
 .banner {
@@ -25,13 +31,16 @@ body {
 }
 
 .coverUI {
+	position: relative;
 	width: 30%;
-	height: 100%;
+	height: auto;
 	margin: auto;
+	top: 50%;
 }
 
 .artistName {
 	font-size: 96px;
+	font-weight: 700;
 	color: white;
 }
 
@@ -51,6 +60,7 @@ body {
 .selector {
 	width: fit-content;
 	margin: auto;
+	font-weight: 700;
 }
 
 .selector hr {
