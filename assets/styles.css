@@ -28,6 +28,7 @@ body {
 			rgba(53, 58, 64, 1) 98%
 		),
 		URL("./img/covers/artist/QUEEN.jpg");
+	background-position: center;
 }
 
 .coverUI {
@@ -127,6 +128,7 @@ body {
 
 iframe {
 	border-style: none;
+	height: fit-content;
 }
 /*#endregion*/
 /*#endregion*/
