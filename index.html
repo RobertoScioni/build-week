@@ -143,23 +143,36 @@
 				class="container-fluid overflow-auto my-0 mx-0 p-0 page-home singleBody"
 			>
 				<!--artist cover template-->
-				<div class="container-fluid justify-content-center p-0 singleHeader">
+				<div class="container-fluid p-0 singleHeader">
 					<div class="overflow-hidden mx-auto d-none banner">
 						<!--img src="assets/img/covers/artist/Cover.jpg" alt="" /-->
 
-						<div
-							class="row text-center coverUI align-content-center align-middle"
-						>
+						<div class="row text-center coverUI">
 							<div class="col col-12 artistName">ARTIST</div>
-							<button class="col col-4 btn btn-success rounded-pill">
-								PLAY
-							</button>
-							<button class="col col-4 btn btn-outline-light rounded-pill">
-								FOLLOW
-							</button>
-							<button class="col col-4 btn btn-outline-light rounded-pill">
-								...
-							</button>
+
+							<nav
+								class="col col-12 navbar navbar-expand-lg navbar-dark artistNav"
+							>
+								<button
+									class="navbar-toggler"
+									type="button"
+									data-toggle="collapse"
+									data-target="#ArtistUi"
+									aria-controls="ArtistUi"
+									aria-expanded="false"
+									aria-label="Toggle navigation"
+								>
+									<span class="navbar-toggler-icon"></span>
+								</button>
+
+								<div class="collapse navbar-collapse" id="ArtistUi">
+									<ul id="" class="navbar-nav mr-auto artistButtons">
+										<li class="btn btn-success rounded-pill">PLAY</li>
+										<li class="btn btn-outline-light rounded-pill">FOLLOW</li>
+										<li class="btn btn-outline-light border-0">...</li>
+									</ul>
+								</div>
+							</nav>
 						</div>
 					</div>
 					<!--#region selector-->

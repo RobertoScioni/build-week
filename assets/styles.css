@@ -9,13 +9,6 @@ body {
 	height: 90vh;
 }
 
-::-moz-scrollbar-button:decrement,
-::-moz-scrollbar-button:increment,
-::-webkit-scrollbar-button:decrement,
-::-webkit-scrollbar-button:increment {
-	width: 0px;
-}
-
 .singleheader {
 	width: 90%;
 	margin: auto;
@@ -39,7 +32,7 @@ body {
 
 .coverUI {
 	position: relative;
-	width: 30%;
+	width: fit-content;
 	height: auto;
 	margin: auto;
 	top: 50%;
@@ -63,6 +56,15 @@ body {
 	padding: 0;
 	/*overflow-y: scroll;*/
 	/*background-color: grey;*/
+}
+
+.artistButtons {
+	width: fit-content;
+	margin-left: auto;
+}
+
+.artistButtons li {
+	width: 200px;
 }
 
 .selector {
