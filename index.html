@@ -47,6 +47,7 @@
 		<link rel="stylesheet" href="assets/styles.css" />
 		<link rel="stylesheet" href="assets/footer.css" />
 		<link rel="stylesheet" href="assets/colors.css" />
+		<link rel="stylesheet" href="assets/scrollfix.css" />
 
 		<link
 			rel="icon"
@@ -138,7 +139,6 @@
 			</div>
 			<!--#endregion-->
 			<!--#region body-->
-			<!--#region selector-->
 			<div
 				class="container-fluid overflow-auto my-0 mx-0 p-0 page-home singleBody"
 			>
@@ -162,7 +162,8 @@
 							</button>
 						</div>
 					</div>
-					<nav class="navbar navbar-expand-lg navbar-dark selector">
+					<!--#region selector-->
+					<nav class="navbar navbar-expand-lg navbar-dark selector sticky-top">
 						<button
 							class="navbar-toggler"
 							type="button"
