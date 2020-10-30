@@ -35,6 +35,14 @@
 	background-color: #050505 !important;
 }
 
+#wrapper.toggled #sidebar-wrapper {
+	margin-left: 0;
+}
+
+.list-group-item button {
+	width: 100%;
+}
+
 @media (min-width: 768px) {
 	#sidebar-wrapper {
 		margin-left: 0;
@@ -50,10 +58,30 @@
 	}
 }
 
-h6 {
-	color: #aba9a9;
-}
+@media (max-width: 576px) {
+	#sidebar-wrapper {
+		max-width: 40px;
+	}
+	.list-group-item {
+		padding-left: 4px;
+		padding-right: 0;
+	}
+	.list-group {
+		max-width: 40px;
+		overflow-x: hidden;
+	}
 
-.list-group-item button {
-	width: 100%;
+	.list-group-item p {
+		display: none;
+	}
+
+	.list-group h6 {
+		display: none;
+	}
+	.list-group svg {
+		margin: 0;
+	}
+	.btn {
+		display: none;
+	}
 }
