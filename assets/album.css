@@ -10,6 +10,7 @@ body {
 .music-title {
   display: inline-flex;
   transition: 0.3s;
+  width: 100%;
 }
 .music-title:hover {
   box-shadow: inset 0px 15px 8px -10px #343a40,
@@ -17,6 +18,7 @@ body {
   background-color: rgb(223, 223, 223);
   border-radius: 10px;
   padding: 6px;
+  color: black;
 }
 h2 {
   margin-top: 20px;
@@ -46,22 +48,22 @@ ul {
 }
 h5 {
   color: rgb(255, 255, 255);
-  font-size: 23px;
+  font-size: 18px;
   transition: 0.3s;
 }
 h5:hover {
   opacity: 1;
-  color: black;
   font-weight: bolder;
+  color: black;
 }
 
 .queen {
   font-size: 14px;
   color: #857c7c;
-  margin-left: 35px;
 }
 .mins {
-  float: right;
+  margin: auto;
+  margin-left: 600px;
 }
 
 /**
@@ -74,20 +76,27 @@ h5:hover {
 
 .albumSongs {
   margin-bottom: 9rem;
+  margin-left: -200px;
 }
 .fixed {
   text-align: center;
+  position: fixed;
+  left: 350px;
 }
-.songList {
-  /* box-shadow: inset 0px 15px 8px -10px #ccc, inset 0px -15px 8px -10px #ccc; */
-  overflow: hidden;
-  overflow-y: scroll;
-  height: 700px;
-  width: 583px;
+@media (max-width: 992px) {
+  .fixed {
+    left: 0vh;
+    position: relative !important;
+  }
+  .albumSongs {
+    margin-left: auto;
+  }
 }
-.mastersongList {
-  overflow: hidden;
-  height: 700px;
-  width: 590px;
-  padding-left: 25px;
+
+.icons {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.cover-col {
+  max-width: 30% !important;
 }
