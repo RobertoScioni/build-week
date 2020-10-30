@@ -1,104 +1,104 @@
 #wrapper {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 #sidebar-wrapper {
-	min-height: 99%;
-	max-height: 99%;
-	margin-left: -15rem;
-	-webkit-transition: margin 0.25s ease-out;
-	-moz-transition: margin 0.25s ease-out;
-	-o-transition: margin 0.25s ease-out;
-	transition: margin 0.25s ease-out;
+  min-height: 99%;
+  max-height: 99%;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
 }
 
 #sidebar-wrapper .sidebar-heading {
-	padding: 0.875rem 1.25rem;
-	font-size: 1.2rem;
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
 }
 
 #sidebar-wrapper .list-group {
-	width: 230px;
+  width: 230px;
 }
 
 #page-content-wrapper {
-	min-width: 100vw;
+  min-width: 100vw;
 }
 
 #sidebar-wrapper {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .list-item:hover {
-	border-left: 5px solid #1db954;
+  border-left: 5px solid #1db954;
 }
 .bg {
-	background-color: #050505 !important;
+  background-color: #050505 !important;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .list-group-item button {
-	width: 100%;
+  width: 100%;
 }
 
 .list-group svg {
-	margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .list-group h6 {
-	margin-bottom: 0;
-	margin-top: auto;
-	font-weight: 700;
+  margin-bottom: 0;
+  margin-top: auto;
+  font-weight: 700;
 }
 
 .hideMe {
-	position: relative;
-	top: 48.4%;
+  position: relative;
+  top: 36.7%;
 }
 
 @media (min-width: 768px) {
-	#sidebar-wrapper {
-		margin-left: 0;
-	}
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
 
-	#page-content-wrapper {
-		min-width: 0;
-		width: 100%;
-	}
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
 
-	#wrapper.toggled #sidebar-wrapper {
-		margin-left: -227px;
-	}
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -227px;
+  }
 }
 
 @media (max-width: 576px) {
-	#sidebar-wrapper {
-		max-width: 40px;
-	}
-	.list-group-item {
-		padding-left: 4px;
-		padding-right: 0;
-	}
-	.list-group {
-		max-width: 40px;
-		overflow-x: hidden;
-	}
+  #sidebar-wrapper {
+    max-width: 40px;
+  }
+  .list-group-item {
+    padding-left: 4px;
+    padding-right: 0;
+  }
+  .list-group {
+    max-width: 40px;
+    overflow-x: hidden;
+  }
 
-	.list-group-item p {
-		display: none;
-	}
+  .list-group-item p {
+    display: none;
+  }
 
-	.list-group h6 {
-		display: none;
-	}
-	.list-group svg {
-		margin: 0;
-		margin-left: 0.2rem;
-	}
-	.btn {
-		display: none;
-	}
+  .list-group h6 {
+    display: none;
+  }
+  .list-group svg {
+    margin: 0;
+    margin-left: 0.2rem;
+  }
+  .btn {
+    display: none;
+  }
 }
