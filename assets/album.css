@@ -74,12 +74,13 @@ h5 {
 .fixed {
   text-align: center;
   position: fixed;
-  left: 340px;
 }
-@media (max-width: 1244px) {
+@media (max-width: 1080px) {
   .fixed {
-    left: 5vh;
     position: relative !important;
+  }
+  .albumSongs {
+    margin-left: auto;
   }
 }
 
