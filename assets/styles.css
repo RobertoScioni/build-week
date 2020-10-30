@@ -9,6 +9,13 @@ body {
 	height: 91vh;
 }
 
+::-moz-scrollbar-button:decrement,
+::-moz-scrollbar-button:increment,
+::-webkit-scrollbar-button:decrement,
+::-webkit-scrollbar-button:increment {
+	width: 0px;
+}
+
 .singleheader {
 	width: 90%;
 	margin: auto;
