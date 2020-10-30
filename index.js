@@ -17,6 +17,11 @@ const focusCard = (E) => {
 }
 //#region object made by tree -J with a modicum of editing
 
+const myEncoding = (uri) => {
+	let components = uri.split("/")
+	return components.map((x) => encodeURIComponent(x)).join("/")
+}
+
 const coversRoot = "assets/img/covers"
 
 const covers = [
@@ -326,7 +331,7 @@ const populateGrids = (selection, page) => {
 									row.name,
 									cell.name,
 								].join("/")
-								frame.src = src
+								frame.src = myEncoding(src)
 								frame.classList.add("infoBox")
 								documentRow.style.height = "99%"
 								documentRow.appendChild(frame)
@@ -344,9 +349,7 @@ const populateGrids = (selection, page) => {
 								].join("/")
 								//console.log("src", src)
 								//console.log("encode", encodeURIComponent(src))
-								newCard.querySelector(".card-img-top").src = encodeURIComponent(
-									src
-								)
+								newCard.querySelector(".card-img-top").src = myEncoding(src)
 								newCard.querySelector(".card-img-top").alt = "cover image"
 								//	+category.name + "/" + row.name + "/" + cell.name
 								newCard.querySelector(
