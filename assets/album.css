@@ -1,5 +1,5 @@
 body {
-	background-image: linear-gradient(to right, #252222, #0f0f0f);
+	background-color: #343a40;
 }
 
 .list-group-flush,
@@ -22,13 +22,19 @@ body {
 }
 h2 {
 	margin-top: 20px;
-	color: rgb(255, 255, 255);
-	font-family: inherit;
+	color: rgb(7, 177, 120);
+	font-family: fangsong;
+	text-shadow: 3px 3px 3px rgb(165, 54, 54);
 	font-weight: bold;
+}
+ul {
+	list-style-type: none;
+	color: white;
+	font-family: "Font Awesome 5 Free";
+	font-size: 15;
 }
 
 .button1 {
-	border: 0;
 	width: 250px;
 	height: 50px;
 	background-color: #288f30;
@@ -42,9 +48,13 @@ h2 {
 }
 h5 {
 	color: rgb(255, 255, 255);
-	font-family: sans-serif;
-	font-size: 13px;
+	font-size: 18px;
 	transition: 0.3s;
+}
+h5:hover {
+	opacity: 1;
+	font-weight: bolder;
+	color: black;
 }
 
 .queen {
@@ -52,8 +62,8 @@ h5 {
 	color: #857c7c;
 }
 .mins {
-	color: white !important;
-	font-size: 15px;
+	margin: auto;
+	margin-left: 600px;
 }
 
 /**
@@ -71,12 +81,17 @@ h5 {
 	position: fixed;
 	min-height: 100%;
 }
+
+.albumSongs {
+	margin-bottom: 9rem;
+	margin-left: -200px;
+}
 .fixed {
 	text-align: center;
 	position: fixed;
 	left: 340px;
 }
-@media (max-width: 1080px) {
+@media (max-width: 992px) {
 	.fixed {
 		left: 0vh;
 		position: relative !important;
@@ -87,25 +102,9 @@ h5 {
 }
 
 .icons {
-	color: white;
-	size: 15px;
+	margin-top: 5px;
+	margin-right: 5px;
 }
 .cover-col {
 	max-width: 30% !important;
-}
-.song-icon {
-	display: flex;
-	align-items: flex-start;
-}
-.song-name {
-	display: flex;
-	align-items: flex-start;
-}
-.list-hover:hover {
-	font-size: 14px;
-	opacity: 0.9;
-}
-h5:hover {
-	color: white;
-	font-size: 16px;
 }
