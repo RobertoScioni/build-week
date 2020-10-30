@@ -1,103 +1,111 @@
 body {
-  background-image: linear-gradient(to right, #252222, #0f0f0f);
+	background-image: linear-gradient(to right, #252222, #0f0f0f);
 }
 
 .list-group-flush,
 .list-group-item {
-  background-color: black;
-  color: white;
+	background-color: black;
+	color: white;
 }
 .music-title {
-  display: inline-flex;
-  transition: 0.3s;
-  width: 100%;
+	display: inline-flex;
+	transition: 0.3s;
+	width: 100%;
 }
 .music-title:hover {
-  box-shadow: inset 0px 15px 8px -10px #343a40,
-    inset 0px -15px 8px -10px #343a40;
-  background-color: rgb(223, 223, 223);
-  border-radius: 10px;
-  padding: 6px;
-  color: black;
+	box-shadow: inset 0px 15px 8px -10px #343a40,
+		inset 0px -15px 8px -10px #343a40;
+	background-color: rgb(223, 223, 223);
+	border-radius: 10px;
+	padding: 6px;
+	color: black;
 }
 h2 {
-  margin-top: 20px;
-  color: rgb(255, 255, 255);
-  font-family: inherit;
-  font-weight: bold;
+	margin-top: 20px;
+	color: rgb(255, 255, 255);
+	font-family: inherit;
+	font-weight: bold;
 }
 
 .button1 {
-  border: 0;
-  width: 250px;
-  height: 50px;
-  background-color: #288f30;
-  border-radius: 20px;
-  color: white;
-  margin-bottom: 15px;
-  transition: 0.5s;
+	border: 0;
+	width: 250px;
+	height: 50px;
+	background-color: #288f30;
+	border-radius: 20px;
+	color: white;
+	margin-bottom: 15px;
+	transition: 0.5s;
 }
 .button1:hover {
-  background-color: #1d5321;
+	background-color: #1d5321;
 }
 h5 {
-  color: rgb(255, 255, 255);
-  font-family: sans-serif;
-  font-size: 13px;
-  transition: 0.3s;
+	color: rgb(255, 255, 255);
+	font-family: sans-serif;
+	font-size: 13px;
+	transition: 0.3s;
 }
 
 .queen {
-  font-size: 14px;
-  color: #857c7c;
+	font-size: 14px;
+	color: #857c7c;
 }
 .mins {
-  color: white !important;
-  font-size: 15px;
+	color: white !important;
+	font-size: 15px;
 }
 
 /**
  * do not remove
 */
+.hideMe {
+	margin-top: 268.171px;
+}
+
+.hideMe .btn {
+	font-weight: 700;
+}
 
 #sidebar-wrapper {
-  position: fixed;
+	position: fixed;
+	min-height: 100%;
 }
 .fixed {
-  text-align: center;
-  position: fixed;
-  left: 350px;
+	text-align: center;
+	position: fixed;
+	left: 340px;
 }
 @media (max-width: 1080px) {
-  .fixed {
-    left: 0vh;
-    position: relative !important;
-  }
-  .albumSongs {
-    margin-left: auto;
-  }
+	.fixed {
+		left: 0vh;
+		position: relative !important;
+	}
+	.albumSongs {
+		margin-left: auto;
+	}
 }
 
 .icons {
-  color: white;
-  size: 15px;
+	color: white;
+	size: 15px;
 }
 .cover-col {
-  max-width: 30% !important;
+	max-width: 30% !important;
 }
 .song-icon {
-  display: flex;
-  align-items: flex-start;
+	display: flex;
+	align-items: flex-start;
 }
 .song-name {
-  display: flex;
-  align-items: flex-start;
+	display: flex;
+	align-items: flex-start;
 }
 .list-hover:hover {
-  font-size: 14px;
-  opacity: 0.9;
+	font-size: 14px;
+	opacity: 0.9;
 }
 h5:hover {
-  color: white;
-  font-size: 16px;
+	color: white;
+	font-size: 16px;
 }
