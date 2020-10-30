@@ -77,7 +77,7 @@ const covers = [
 					{
 						type: "directory",
 						name: "01-media",
-						contents: [{ type: "file", name: "01-ok this was tricky.png" }],
+						contents: [{ type: "file", name: "about.htm" }],
 					},
 				],
 			},
@@ -316,29 +316,45 @@ const populateGrids = (selection, page) => {
 					documentRow.classList.add("row", "m-0")
 					row.contents.forEach((cell) => {
 						if (cell.type === "file") {
-							let newCard = document
-								.querySelector(".templateCard")
-								.cloneNode(true)
-							newCard.classList.remove("d-none", "templateCard")
-							let src = [
-								coversRoot,
-								page,
-								category.name,
-								row.name,
-								cell.name,
-							].join("/")
-							console.log("src", src)
-							console.log("encode", encodeURIComponent(src))
-							newCard.querySelector(".card-img-top").src = encodeURIComponent(
-								src
-							)
-							newCard.querySelector(".card-img-top").alt = "cover image"
-							//	+category.name + "/" + row.name + "/" + cell.name
-							newCard.querySelector(".card-title").innerText = cell.name
-								.slice(3)
-								.slice(0, -4)
-							console.log("new card---", newCard)
-							documentRow.appendChild(newCard)
+							if (cell.name.substring(cell.name.length - 4) === ".htm") {
+								console.log("found an anomaly")
+								let frame = document.createElement("iframe")
+								let src = [
+									coversRoot,
+									page,
+									category.name,
+									row.name,
+									cell.name,
+								].join("/")
+								frame.src = src
+								frame.classList.add("infoBox")
+								documentRow.style.height = "99%"
+								documentRow.appendChild(frame)
+							} else {
+								let newCard = document
+									.querySelector(".templateCard")
+									.cloneNode(true)
+								newCard.classList.remove("d-none", "templateCard")
+								let src = [
+									coversRoot,
+									page,
+									category.name,
+									row.name,
+									cell.name,
+								].join("/")
+								//console.log("src", src)
+								//console.log("encode", encodeURIComponent(src))
+								newCard.querySelector(".card-img-top").src = encodeURIComponent(
+									src
+								)
+								newCard.querySelector(".card-img-top").alt = "cover image"
+								//	+category.name + "/" + row.name + "/" + cell.name
+								newCard.querySelector(
+									".card-title"
+								).innerText = cell.name.slice(3).slice(0, -4)
+								//console.log("new card---", newCard)
+								documentRow.appendChild(newCard)
+							}
 						}
 					})
 				}

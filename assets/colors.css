@@ -24,3 +24,7 @@
 	background-repeat: no-repeat;
 	background-position: bottom center;
 }
+
+.infocontent {
+	background-color: rgba(53, 58, 64, 1);
+}

@@ -24,7 +24,8 @@
       ]},
       {"type":"directory","name":"03-ABOUT","contents":[
         {"type":"directory","name":"01-media","contents":[
-          {"type":"file","name":"01-ok this was thicky.png"}
+          {"type":"file","name":"01-ok this was tricky.png"},
+          {"type":"file","name":"about.htm"}
         ]}
       ]},
       {"type":"file","name":"QUEEN.jpg"}
@@ -74,5 +75,5 @@
       ]}
     ]}
   ]},
-  {"type":"report","directories":20,"files":34}
+  {"type":"report","directories":20,"files":35}
 ]

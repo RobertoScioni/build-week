@@ -71,6 +71,10 @@ body {
 	padding: 5px;
 }
 
+.infoBox {
+	width: 100%;
+}
+
 .voice .card-body {
 	max-width: 222px;
 }
@@ -99,6 +103,10 @@ body {
 .open svg {
 	margin-top: 25%;
 	height: 50%;
+}
+
+iframe {
+	border-style: none;
 }
 /*#endregion*/
 /*#endregion*/
