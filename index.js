@@ -1,5 +1,3 @@
-const server = false
-
 const switchTo = (E) => {
 	document.querySelectorAll("#sections > .section").forEach((section) => {
 		section.classList.add("d-none")
@@ -204,7 +202,38 @@ const testQuery = () => {
 	console.log(out)
 }
 
+const fetchArtists = () => {
+	artists = ["Stratovarius", "Metallica", "Iron Mayden"]
+	artists.forEach((artist) => {
+		fetch("https://rapidapi.p.rapidapi.com/search?q=" + artist, {
+			method: "GET",
+			headers: {
+				"x-rapidapi-key": "e75d8629a2mshe74bcadd1131095p185f53jsn7e5fafda57bb",
+				"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+			},
+		})
+			.then((response) => response.json())
+			.then((data) => (shelf[artist] = data.data))
+			.catch((err) => {
+				console.error(err)
+			})
+
+		let sidebar = document.querySelector("#sidebar-wrapper .list-group")
+		console.log(sidebar.children)
+		let voice = sidebar.querySelector("a").cloneNode(true)
+		sidebar.appendChild(voice)
+		voice.href = "artist.html?neoArtist=" + encodeURIComponent(artist)
+		voice.querySelector("h6").innerText = artist
+		voice.querySelector("svg path").remove()
+	})
+}
+
+let shelf = {}
+
 const populateBody = (pagep) => {
+	fetchArtists()
+
+	console.log(shelf)
 	let page =
 		window.location.search === "" ? "home" : window.location.search.slice(1)
 	let folder = null
@@ -231,7 +260,6 @@ const populateBody = (pagep) => {
 			banner.querySelector(".artistName").innerText = element.name.slice(0, -4)
 		}
 	})
-
 	//console.log(selector)
 	populateSelector(selector)
 	//console.log(selector)
